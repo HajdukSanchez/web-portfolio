@@ -1,4 +1,10 @@
 /* Developed by Jozek Andrzej Hajduk Sánchez */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;500;700;900&display=swap');
+
+:root {
+  --header-background-color: #222831;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -7,6 +13,7 @@
 
 html {
   font-size: 62.5%;
+  font-family: 'Inter', sans-serif;
 }
 
 ul {
@@ -14,5 +21,14 @@ ul {
 }
 
 a {
+  color: white;
   text-decoration: none;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--header-background-color);
 }
