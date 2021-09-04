@@ -1,61 +1,60 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-// * Styles
-import {
-  HeaderMenu,
-  Navigator,
-  NavigatorLinks,
-  List,
-  ListItem,
-  MenuHamb,
-} from '../../../styles/components/Header'
 // * Icons
 import { VscGithubInverted, VscColorMode, VscCode } from 'react-icons/vsc'
+// * Styles
+import {
+  Container,
+  Navigation,
+  NavigationMenu,
+  List,
+  ListMenu,
+  Item,
+  ItemMenu,
+  MenuHamburger,
+} from '../../../styles/components/Header'
 
 const Header = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [showMenu, setShowMenu] = useState(false)
 
   const handleMenu = () => {
-    setIsMenuOpen(!isMenuOpen)
-    if (isMenuOpen) {
-      setShowMenu(true)
-    } else {
-      setShowMenu(false)
-    }
+    setShowMenu(!showMenu) // Toggle the value
   }
 
   return (
     <header>
-      <HeaderMenu>
+      <Container>
         <div>
           <Link to='/'>logo</Link>
         </div>
-        <NavigatorLinks isHidden isOpen={showMenu}>
-          <List>
-            <ListItem>
+        <NavigationMenu open={showMenu}>
+          <ListMenu open={showMenu}>
+            <ItemMenu>
               <Link to='/about-me'>about me</Link>
-            </ListItem>
-            <ListItem>
+            </ItemMenu>
+            <ItemMenu>
               <Link to='/blog'>blog</Link>
-            </ListItem>
-            <ListItem>
+            </ItemMenu>
+            <ItemMenu>
               <Link to='/works'>works</Link>
-            </ListItem>
-            <ListItem>
+            </ItemMenu>
+            <ItemMenu>
               <Link to='/certificates'>certificates</Link>
-            </ListItem>
-          </List>
-        </NavigatorLinks>
-        <Navigator>
-          <List>
-            <ListItem isButton isHidden>
+            </ItemMenu>
+            <ItemMenu border>
               <Link to=''>cv</Link>
-            </ListItem>
-            <ListItem>
+            </ItemMenu>
+          </ListMenu>
+        </NavigationMenu>
+        <Navigation>
+          <List>
+            <Item border hidden>
+              <Link to=''>cv</Link>
+            </Item>
+            <Item>
               <VscColorMode />
-            </ListItem>
-            <ListItem>
+            </Item>
+            <Item hidden>
               <a
                 href='https://github.com/HajdukSanchez'
                 target='_blank'
@@ -63,13 +62,13 @@ const Header = () => {
               >
                 <VscGithubInverted />
               </a>
-            </ListItem>
+            </Item>
           </List>
-        </Navigator>
-        <MenuHamb>
-          <VscCode style={{ fill: 'white' }} onClick={() => handleMenu()} />
-        </MenuHamb>
-      </HeaderMenu>
+        </Navigation>
+        <MenuHamburger onClick={() => handleMenu()} open={showMenu}>
+          <VscCode />
+        </MenuHamburger>
+      </Container>
     </header>
   )
 }

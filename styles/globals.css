@@ -16,6 +16,10 @@ html {
   font-family: 'Inter', sans-serif;
 }
 
+body {
+  position: relative;
+}
+
 ul {
   list-style: none;
 }
@@ -26,7 +30,7 @@ a {
 }
 
 header {
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   right: 0;
