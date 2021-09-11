@@ -10,7 +10,7 @@ import {
   Text,
   Socials,
   Social,
-} from '../../../../styles/components/home/description/Description'
+} from './DescriptionStyles'
 
 const Description = () => {
   return (

@@ -12,7 +12,7 @@ import {
   Item,
   ItemMenu,
   MenuHamburger,
-} from '../../../styles/components/header/Header'
+} from './HeaderStyles'
 
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false)
