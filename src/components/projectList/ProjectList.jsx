@@ -4,10 +4,12 @@ import Project from './project/Project.jsx'
 
 const ProjectList = () => {
   return (
-    <div>
+    <>
       <Project />
       <Project />
-    </div>
+      <Project />
+      <Project />
+    </>
   )
 }
 

@@ -1,21 +1,26 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+// * Icons
+import { FaSearch } from 'react-icons/fa'
 // * Components
 import { ProjectList } from '../../'
 // * Styles
-import { Title } from './ProjectsStyles'
+import { Container, Title, More } from './ProjectsStyles'
 
 const Projects = () => {
   return (
-    <section>
+    <Container>
       <Title>Projects</Title>
       <div>
         <ProjectList />
       </div>
-      <div>
-        <Link>View more</Link>
-      </div>
-    </section>
+      <More>
+        <Link>
+          View more
+          <FaSearch />
+        </Link>
+      </More>
+    </Container>
   )
 }
 

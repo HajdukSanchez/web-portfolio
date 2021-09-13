@@ -14,6 +14,7 @@
 html {
   font-size: 62.5%;
   font-family: 'Inter', sans-serif;
+  background-color: #151a22;
 }
 
 body {
@@ -35,4 +36,5 @@ header {
   left: 0;
   right: 0;
   background-color: var(--header-background-color);
+  z-index: 100;
 }

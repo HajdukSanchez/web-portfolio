@@ -41,7 +41,12 @@ const Project = () => {
           <Technology>javascript</Technology>
         </Technologies>
         <Links>
-          <Link href='http://' target='_blank' rel='noopener noreferrer'>
+          <Link
+            href='http://'
+            target='_blank'
+            rel='noopener noreferrer'
+            animation
+          >
             <span>Documentation</span>
             <CgArrowLongRight />
           </Link>
