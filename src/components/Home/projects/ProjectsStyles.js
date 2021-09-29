@@ -1,27 +1,9 @@
 import styled, { keyframes } from 'styled-components'
 
-const MoveTopToBottom = keyframes`
-  0% {
-    transform: translateY(0px)
-  }
-  25% {
-    transform: translateY(-2px)
-  }
-  50% {
-    transform: translateY(0px)
-  }
-  75% {
-    transform: translateY(2px)
-  }
-  100% {
-    transform: translateY(0px)
-  }
-`
-
 export const Container = styled.section`
   position: relative;
   margin: 0 0 4rem;
-  max-height: 1250px;
+  max-height: 1600px;
   overflow: hidden;
   border-radius: 0.6rem;
 `
@@ -41,11 +23,11 @@ export const More = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10rem 0 2rem;
+  padding: 40rem 0 2rem;
   width: 100%;
   text-align: center;
   z-index: 10;
-  background-image: linear-gradient(to top, #ffffff66 50%, transparent 90%);
+  background-image: linear-gradient(to top, #151a22 7%, transparent 90%);
 
   & > a {
     display: flex;
@@ -59,7 +41,6 @@ export const More = styled.div`
 
     & > svg {
       margin-left: 1rem;
-      animation: ${MoveTopToBottom} 2.5s linear infinite;
     }
   }
 `

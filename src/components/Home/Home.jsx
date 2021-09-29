@@ -2,6 +2,7 @@ import React from 'react'
 // * Components
 import Description from './description/Description'
 import Projects from './projects/Projects'
+import Technologies from './technologies/Technologies'
 // * Styles
 import { Container } from './HomeStyles'
 
@@ -10,6 +11,7 @@ const Home = () => {
     <Container>
       <Description />
       <Projects />
+      <Technologies />
     </Container>
   )
 }

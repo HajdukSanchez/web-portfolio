@@ -35,7 +35,7 @@ export const Social = styled.a`
   justify-content: center;
   align-items: center;
   padding: 1.5rem;
-  width: 100%;
+  width: 70%;
   font-size: 1.4rem;
   text-align: center;
   border: 1px solid black;

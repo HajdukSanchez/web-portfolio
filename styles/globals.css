@@ -38,3 +38,31 @@ header {
   background-color: var(--header-background-color);
   z-index: 100;
 }
+
+
+/* * Styles for SLider HOME */
+/* ! Disabled arrow sliders */
+.slick-slider button {
+  display: none !important;
+}
+.slick-slider.slick-initialized{
+  margin-bottom: 2rem;
+}
+.slick-slider.slick-initialized::before,
+.slick-slider.slick-initialized::after{
+  content: "";
+  width: 6rem;
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 90;
+}
+.slick-slider.slick-initialized:before {
+  left: 0;
+  background-image: linear-gradient(to right,#151a22 30%,transparent 90%);
+}
+.slick-slider.slick-initialized:after {
+  right: 0;
+  background-image: linear-gradient(to left,#151a22 30%,transparent 90%);
+}
