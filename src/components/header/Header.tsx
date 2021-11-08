@@ -1,8 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-// * Icons
 import { VscGithubInverted, VscColorMode, VscCode } from 'react-icons/vsc'
-// * Styles
 import {
   Container,
   Navigation,
@@ -18,7 +16,7 @@ const Header = () => {
   const [showMenu, setShowMenu] = useState(false)
 
   const handleMenu = () => {
-    setShowMenu(!showMenu) // Toggle the value
+    setShowMenu(!showMenu) // ? Toggle the value
   }
 
   return (
@@ -73,7 +71,7 @@ const Header = () => {
   )
 }
 
-export default Header
+export { Header }
 
 // TODO: ADD LOCAL LOGO
 // TODO: Add dark mode button functionality

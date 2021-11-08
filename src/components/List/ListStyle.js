@@ -1,21 +1,13 @@
-import styled, { keyframes } from 'styled-components'
+import styled from 'styled-components'
 
-export const Container = styled.section`
+export const ListContainer = styled.div`
   position: relative;
-  margin: 0 0 4rem;
   max-height: 1600px;
   overflow: hidden;
   border-radius: 0.6rem;
 `
 
-export const Title = styled.h2`
-  padding-bottom: 4rem;
-  color: white;
-  font-size: 3.5rem;
-  text-align: center;
-`
-
-export const More = styled.div`
+export const ListMoreButton = styled.div`
   position: absolute;
   left: 0;
   right: 0;

@@ -1,9 +1,8 @@
 import React from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-// * Components
-import { Home, NotFound, Layout } from './components'
-// * Styles
-import '../styles/globals.css'
+import { Layout } from '@components'
+import { Home } from '@pages'
+import './styles/globals.css'
 
 const App = () => {
   return (
@@ -11,11 +10,11 @@ const App = () => {
       <Layout>
         <Switch>
           <Route exact path='/' component={Home} />
-          <Route component={NotFound} /> // Page not Found
+          {/* <Route component={NotFound} /> // ? Page not Found */}
         </Switch>
       </Layout>
     </Router>
   )
 }
 
-export default App
+export { App }

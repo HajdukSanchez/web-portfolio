@@ -11,7 +11,12 @@ module.exports = {
     publicPath: '/',
   },
   resolve: {
-    extensions: ['.js', '.jsx'],
+    extensions: ['.js', '.jsx', '.tsx', '.ts'],
+    alias: {
+      '@components': path.resolve('src/components'),
+      '@pages': path.resolve('src/pages'),
+      '@utils': path.resolve('src/utils'),
+    },
   },
   module: {
     rules: [
@@ -21,6 +26,11 @@ module.exports = {
         use: {
           loader: 'babel-loader',
         },
+      },
+      {
+        test: /\.tsx?$/,
+        use: 'ts-loader',
+        exclude: /node_modules/,
       },
       {
         test: /\.html$/,
