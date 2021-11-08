@@ -1,7 +1,7 @@
 import React from 'react'
 import { VscGithubInverted } from 'react-icons/vsc'
 import { FaLinkedin } from 'react-icons/fa'
-import { HomeContainer } from './HomeStyles'
+import { HomeContainer } from './HomeStyle'
 import { Container, Button, List, ProjectCard, Text } from '@components'
 
 const Home = () => {

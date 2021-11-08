@@ -1,25 +1,19 @@
 import React, { ReactElement } from 'react'
-import { Link } from 'react-router-dom'
 import { FaSearch } from 'react-icons/fa'
-import { ListContainer, ListMoreButton } from './ListStyle'
+import { ListContainer } from './ListStyle'
+import { LinkButton } from '@components'
 
 type ListProps = {
   children: ReactElement
   isFullMode?: boolean
+  url?: string
 }
 
-const List = ({ children, isFullMode }: ListProps) => {
+const List = ({ children, isFullMode, url }: ListProps) => {
   return (
     <ListContainer>
       <ul>{children}</ul>
-      {!isFullMode && (
-        <ListMoreButton>
-          <Link to=''>
-            View more
-            <FaSearch />
-          </Link>
-        </ListMoreButton>
-      )}
+      {!isFullMode && <LinkButton text='View more' modifier='more' url={url} />}
     </ListContainer>
   )
 }
@@ -27,6 +21,7 @@ const List = ({ children, isFullMode }: ListProps) => {
 List.defaultProps = {
   children: null,
   isFullMode: false,
+  url: '#',
 }
 
 export { List }
