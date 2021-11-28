@@ -1,12 +1,6 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import { ButtonContent } from './ButtonStyle'
-
-type ButtonProps = {
-  Icon?: any
-  text: string
-  modifier?: string
-}
+import { ButtonProps } from '@types'
 
 const Button = ({ Icon, text, modifier }: ButtonProps) => {
   return (

@@ -11,19 +11,7 @@ import {
   Links,
   Link,
 } from './ProjectCardStyle'
-
-type TechnologyProps = {
-  name: string
-}
-
-type ProjectCardProps = {
-  image: string
-  name: string
-  description: string
-  technologies: TechnologyProps[]
-  documentationUrl: string
-  projectUrl?: string
-}
+import { ProjectCardProps, TechnologyProps } from '@types'
 
 const ProjectCard = ({
   image,
@@ -42,7 +30,7 @@ const ProjectCard = ({
         <Name>{name}</Name>
         <Description>{description}</Description>
         <Technologies>
-          {technologies.map((technology) => (
+          {technologies.map((technology: TechnologyProps) => (
             <Technology key={technology.name}>{technology.name}</Technology>
           ))}
         </Technologies>

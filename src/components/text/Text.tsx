@@ -1,9 +1,6 @@
 import React from 'react'
 import { TextComponent } from './TextStyles'
-
-type TextProps = {
-  text: string
-}
+import { TextProps } from '@types'
 
 const Text = ({ text }: TextProps) => <TextComponent>{text}</TextComponent>
 

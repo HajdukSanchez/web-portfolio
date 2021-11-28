@@ -1,10 +1,7 @@
 import React from 'react'
 import { MenuContainer, MenuList } from './MenuStyle'
 import { LinkButton, MenuItem } from '@components'
-
-type MenuProps = {
-  isOpen: boolean
-}
+import { MenuProps } from '@types'
 
 const Menu = ({ isOpen }: MenuProps) => {
   return (

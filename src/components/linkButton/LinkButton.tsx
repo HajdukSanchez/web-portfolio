@@ -1,13 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { LinkComponent } from './LinkButtonStyle'
+import { LinkButtonProps } from '@types'
 
-type LinkButtonProps = {
-  text: string
-  url: string
-  Icon?: any
-  modifier: string
-}
 
 const LinkButton = ({ url, text, Icon, modifier }: LinkButtonProps) => {
   return (

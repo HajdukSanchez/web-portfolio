@@ -8,7 +8,10 @@ export const LinkComponent = styled.div`
   font-size: 1.4rem;
   text-align: center;
   border-radius: 0.6rem;
-  cursor: pointer;
+
+  & > a {
+    cursor: pointer;
+  }
 
   ${(props) =>
     props.modifier === 'more' &&
@@ -25,6 +28,7 @@ export const LinkComponent = styled.div`
         padding: 1.5rem;
         width: 60%;
         background-color: #2b3137;
+        border-radius: 0.6rem;
 
         & > svg {
           margin-left: 1rem;
@@ -36,7 +40,7 @@ export const LinkComponent = styled.div`
     props.modifier === 'cv' &&
     css`
       margin: 2rem 4rem;
-      padding: 0.7rem;
+      padding: 1rem;
       border: 1px solid #ad4226;
       background-color: #f4ae95;
 

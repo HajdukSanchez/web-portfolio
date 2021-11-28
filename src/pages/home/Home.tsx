@@ -2,7 +2,7 @@ import React from 'react'
 import { VscGithubInverted } from 'react-icons/vsc'
 import { FaLinkedin } from 'react-icons/fa'
 import { HomeContainer } from './HomeStyle'
-import { Container, Button, List, ProjectCard, Text } from '@components'
+import { Container, Button, List, ProjectCard, Text, CertificateCard } from '@components'
 
 const Home = () => {
   return (
@@ -27,7 +27,9 @@ const Home = () => {
       </Container>
       <Container title='Certificates' description='Some of my experience...'>
         <List>
-          <ProjectCard />
+          <CertificateCard />
+          <CertificateCard />
+          <CertificateCard />
         </List>
       </Container>
     </HomeContainer>

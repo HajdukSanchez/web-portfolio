@@ -1,9 +1,6 @@
 import React from 'react'
 import { TitleComponent } from './TitleStyles'
-
-type TitleProps = {
-  text: string
-}
+import { TitleProps } from '@types'
 
 const Title = ({ text }: TitleProps) => <TitleComponent>{text}</TitleComponent>
 

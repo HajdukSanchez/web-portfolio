@@ -1,11 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { MenuITemContainer } from './MenuItemStyle'
-
-type MenuItemProps = {
-  text: string
-  url: string
-}
+import { MenuItemProps } from '@types'
 
 const MenuItem = ({ text, url }: MenuItemProps) => {
   return (

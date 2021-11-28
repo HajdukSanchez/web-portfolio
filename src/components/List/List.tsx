@@ -1,13 +1,7 @@
-import React, { ReactElement } from 'react'
-import { FaSearch } from 'react-icons/fa'
+import React from 'react'
 import { ListContainer } from './ListStyle'
 import { LinkButton } from '@components'
-
-type ListProps = {
-  children: ReactElement
-  isFullMode?: boolean
-  url?: string
-}
+import { ListProps } from '@types'
 
 const List = ({ children, isFullMode, url }: ListProps) => {
   return (

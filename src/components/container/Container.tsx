@@ -1,13 +1,7 @@
-import React, { ReactElement } from 'react'
+import React from 'react'
 import { Contain, Description, ChildContainer } from './ContainerStyle'
 import { Text, Title } from '@components'
-
-type ContainerType = {
-  title: string
-  description?: string
-  children: ReactElement
-  isHeaderInfo?: boolean
-}
+import { ContainerType } from '@types'
 
 const Container = ({ title, description, children, isHeaderInfo }: ContainerType) => {
   return (
