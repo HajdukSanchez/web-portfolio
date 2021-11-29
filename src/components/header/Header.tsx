@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { VscGithubInverted, VscColorMode, VscCode } from 'react-icons/vsc'
 import { Container, Navigation, List, Item, HamburgerMenu } from './HeaderStyle'
 import { Menu } from '@components'
+import { GitHub, MenuHamburger, ThemeIcon } from '@utils/icons'
 
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false)
@@ -24,18 +24,17 @@ const Header = () => {
               <Link to=''>cv</Link>
             </Item>
             <Item>
-              <VscColorMode />
+              <ThemeIcon />
             </Item>
             <Item hidden>
               <a href='https://github.com/HajdukSanchez' target='_blank' rel='noopener noreferrer'>
-                <VscGithubInverted />
+                <GitHub />
               </a>
             </Item>
           </List>
         </Navigation>
-
         <HamburgerMenu onClick={() => handleMenu()} open={showMenu}>
-          <VscCode />
+          <MenuHamburger />
         </HamburgerMenu>
       </Container>
     </header>

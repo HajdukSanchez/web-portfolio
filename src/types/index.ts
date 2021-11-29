@@ -1,7 +1,11 @@
-import { ReactElement } from 'react'
+import { ReactElement, ReactNode } from 'react'
+
+export type FooterProps = {
+  children: ReactNode
+}
 
 export type ButtonProps = {
-  Icon?: any
+  Icon?: ReactElement | any
   text: string
   modifier?: string
 }
@@ -16,19 +20,19 @@ export type CertificateCardProps = {
 export type ContainerType = {
   title: string
   description?: string
-  children: ReactElement
+  children: ReactNode
   isHeaderInfo?: boolean
 }
 
 export type LinkButtonProps = {
   text: string
   url: string
-  Icon?: any
+  Icon?: ReactElement
   modifier: string
 }
 
 export type ListProps = {
-  children: ReactElement
+  children: ReactNode
   isFullMode?: boolean
   url?: string
 }
@@ -37,7 +41,7 @@ export type MenuProps = {
   isOpen: boolean
 }
 
-export type MenuItemProps = {
+export type ItemProps = {
   text: string
   url: string
 }
